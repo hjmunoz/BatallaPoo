@@ -40,7 +40,7 @@ public class Principal {
 
         yoda.setFisico(5);
         yoda.setFuerza(60);
-        yoda.setNivel(10);
+        yoda.setNivel(3);
         yoda.setNombre("Yoda");
         yoda.setPh(10);
         yoda.setSalud(200);
@@ -57,26 +57,24 @@ public class Principal {
             if (aleatorio == 0) {
 
                 salud = luke.ataqueFisico();
-
+                System.out.println(luke.getNombre() + " ha realizado un ataque fisico de: " + salud);
             } else {
 
                 salud = luke.ataqueFuerza();
-
+                System.out.println(luke.getNombre() + " ha realizado un ataque magico de: " + salud);
             }
-            System.out.println(luke.getNombre() + " ha realizado un ataque de: " + salud);
             darthVader.daño(salud);
 
             aleatorio = rand.nextInt(2);
             if (aleatorio == 0) {
 
                 salud = yoda.ataqueFisico();
-
+                System.out.println(yoda.getNombre() + " ha realizado un ataque fisico de: " + salud);
             } else {
 
                 salud = yoda.ataqueFuerza();
-
+                System.out.println(yoda.getNombre() + " ha realizado un ataque magico de: " + salud);
             }
-            System.out.println(yoda.getNombre() + " ha realizado un ataque de: " + salud);
             darthVader.daño(salud);
 
             if (darthVader.getSalud() > 0) {
@@ -85,13 +83,12 @@ public class Principal {
                 if (aleatorio == 0) {
 
                     salud = darthVader.ataqueFisico();
-
+                    System.out.println(darthVader.getNombre() + " ha realizado un ataque de: " + salud);
                 } else {
 
                     salud = darthVader.ataqueFuerza();
-
+                    System.out.println(darthVader.getNombre() + " ha realizado un ataque magico de: " + salud);
                 }
-                System.out.println(darthVader.getNombre() + " ha realizado un ataque de: " + salud);
                 aleatorio = rand.nextInt(2);
                 if (aleatorio == 0) {
 
